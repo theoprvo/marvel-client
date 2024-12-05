@@ -1,0 +1,60 @@
+.hero {
+  background-image: url("https://res.cloudinary.com/dwe3psc5x/image/upload/v1733235484/marvel_wp_nwt7ld.jpg");
+  background-size: cover;
+  height: 40vh;
+
+  .hero-mask {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+  }
+
+  h1 {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 6rem;
+  }
+  a {
+    button {
+      position: absolute;
+      top: 30vh;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+      width: fit-content;
+      color: var(--white);
+      border: solid 1px var(--white);
+      padding: 8px 12px;
+      background: none;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+    button:hover {
+      color: var(--secondary-level-1);
+      border-color: var(--secondary-level-1);
+    }
+  }
+}
+
+.section-title {
+  color: var(--dark);
+  margin-left: 40px;
+  font-size: 2.8rem;
+}
+
+.comics {
+  margin-top: 40px;
+}
+
+.favorites {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

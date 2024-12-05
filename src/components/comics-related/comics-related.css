@@ -1,0 +1,10 @@
+.comics-related-hover {
+  color: var(--primary-level-5);
+}
+
+.comics-related-hover:hover {
+  color: var(--primary-level-1);
+  img {
+    outline: solid 1px var(--primary-level-1);
+  }
+}

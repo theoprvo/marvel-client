@@ -1,0 +1,104 @@
+/* IMPORTED FONTS */
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* GLOBAL STYLE */
+:root {
+  font-size: 62.5%;
+  --white: #ffffff;
+  --dark: #141414;
+  --gold: #da962f;
+  --primary-level-1: #ed1c24;
+  --primary-level-2: #db1218;
+  --primary-level-3: #e21219;
+  --primary-level-4: #d01117;
+  --primary-level-5: #aa0e13;
+  --secondary-level-1: #ebebeb;
+  --secondary-level-2: #cccccc;
+  --secondary-level-3: #838383;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: var(--secondary-level-1);
+}
+
+/* CUSTOM CLASSES */
+
+.loader-spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}

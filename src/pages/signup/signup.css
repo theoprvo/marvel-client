@@ -1,0 +1,114 @@
+.auth-background {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-image: url("https://res.cloudinary.com/dwe3psc5x/image/upload/v1733274133/marvel-walp_n3xdb4.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  .exit {
+    display: flex;
+    justify-content: end;
+    a {
+      margin-right: 5rem;
+      margin-top: 5rem;
+      font-size: 5rem;
+      text-decoration: none;
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      color: var(--secondary-level-1);
+    }
+  }
+
+  .sign-up {
+    background-color: var(--secondary-level-1);
+    color: var(--dark);
+    margin-top: 15vh;
+    margin-inline: auto;
+    padding: 3rem 5rem;
+    border-radius: 16px;
+    border: solid 1px var(--primary-level-1);
+    max-width: 600px;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: var(--primary-level-1);
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 2px;
+  }
+
+  .d-flex-col {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+  }
+
+  label {
+    color: var(--secondary-level-3);
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4rem;
+  }
+  input {
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--primary-level-1);
+    font-size: 2.6rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    background: linear-gradient(
+      90deg,
+      rgba(204, 204, 204, 1) 25%,
+      rgba(235, 235, 235, 1) 100%
+    );
+  }
+  input::placeholder {
+    font-weight: 700;
+    opacity: 0.8;
+    color: var(--primary-level-4);
+  }
+
+  .form-end {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+
+    button {
+      color: var(--secondary-level-1);
+      border: solid 1px var(--secondary-level-1);
+      background-color: var(--primary-level-1);
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      border-radius: 4px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+    button:hover {
+      background-color: var(--primary-level-3);
+    }
+    a {
+      margin-top: 4px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      color: var(--secondary-level-3);
+    }
+    a:hover {
+      color: var(--secondary-level-4);
+    }
+  }
+}

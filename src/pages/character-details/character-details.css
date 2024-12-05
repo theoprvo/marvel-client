@@ -1,0 +1,54 @@
+.page-detail {
+  display: flex;
+  align-items: center;
+
+  .page-detail-image-container {
+    width: 25%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .page-detail-text-container {
+    margin-left: 24px;
+    max-width: 65%;
+    .headline {
+      display: flex;
+      h1 {
+        font-size: 4.2rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      margin-top: 24px;
+      line-height: 1.5;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.appearance-section {
+  margin-top: 60px;
+  h2 {
+    font-size: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-level-1);
+  }
+
+  .appearance-detail {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
