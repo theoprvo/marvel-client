@@ -20,7 +20,6 @@ const Home = ({ token }) => {
         `http://localhost:3000/favorites/${token}`
       );
       setDataFavorites(responseFavorites.data); //array with favorites
-
       setIsLoading(false);
     };
     fetchData();
