@@ -13,11 +13,11 @@ const Home = ({ token }) => {
   useEffect(() => {
     const fetchData = async () => {
       const responseUser = await axios.get(
-        `http://localhost:3000/user/${token}`
+        `${import.meta.env.VITE_MY_API_UR}/user/${token}`
       );
       setDataUser(responseUser.data);
       const responseFavorites = await axios.get(
-        `http://localhost:3000/favorites/${token}`
+        `${import.meta.env.VITE_MY_API_UR}/favorites/${token}`
       );
       setDataFavorites(responseFavorites.data); //array with favorites
       setIsLoading(false);

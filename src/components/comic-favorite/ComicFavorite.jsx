@@ -10,11 +10,13 @@ const ComicFavorite = ({ id, token }) => {
   useEffect(() => {
     const fetchData = async () => {
       //DATA OF COMIC
-      const response = await axios.get(`http://localhost:3000/comic/${id}`);
+      const response = await axios.get(
+        `${import.meta.env.VITE_MY_API_UR}/comic/${id}`
+      );
       setData(response.data);
       //DATA OF FAVORITES OF USER
       const responseFavoriteCheck = await axios.get(
-        `http://localhost:3000/favorite/check`,
+        `${import.meta.env.VITE_MY_API_UR}/favorite/check`,
         { params: { userToken: token, marvelId: id } }
       );
       setDataFavorite({ ...responseFavoriteCheck.data });
@@ -25,7 +27,7 @@ const ComicFavorite = ({ id, token }) => {
 
   const removeFavorite = async () => {
     await axios.delete(
-      `http://localhost:3000/favorite/${dataFavorite.favoriteId}`
+      `${import.meta.env.VITE_MY_API_UR}/favorite/${dataFavorite.favoriteId}`
     );
     setDataFavorite({ isFavorite: false });
     console.log(dataFavorite);

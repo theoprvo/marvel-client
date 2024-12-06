@@ -11,7 +11,7 @@ const Header = ({ token, setUser }) => {
     const fetchData = async () => {
       if (token) {
         const responseUser = await axios.get(
-          `http://localhost:3000/user/${token}`
+          `${import.meta.env.VITE_MY_API_UR}/user/${token}`
         );
         setDataUser(responseUser.data);
         setIsLoading(false);

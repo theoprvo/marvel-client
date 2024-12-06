@@ -17,10 +17,13 @@ const Login = ({ setUser }) => {
       event.preventDefault();
       setIsLoading(true);
       //
-      const response = await axios.post(`http://localhost:3000/user/login/`, {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_MY_API_UR}/user/login/`,
+        {
+          email: email,
+          password: password,
+        }
+      );
       if (response.data.token) {
         setUser(response.data.token);
         setIsLoading(false);

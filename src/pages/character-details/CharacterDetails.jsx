@@ -13,11 +13,13 @@ const CharacterDetails = ({ token }) => {
   useEffect(() => {
     const fetchData = async () => {
       //DATA OF CHARACTER
-      const response = await axios.get(`http://localhost:3000/comics/${id}`);
+      const response = await axios.get(
+        `${import.meta.env.VITE_MY_API_UR}/comics/${id}`
+      );
       setData(response.data);
       //DATA OF FAVORITES OF USER
       const responseFavoriteCheck = await axios.get(
-        `http://localhost:3000/favorite/check`,
+        `${import.meta.env.VITE_MY_API_UR}/favorite/check`,
         { params: { userToken: token, marvelId: id } }
       );
       setDataFavorite({ ...responseFavoriteCheck.data });
@@ -27,17 +29,20 @@ const CharacterDetails = ({ token }) => {
   }, [id, token]);
 
   const addFavorite = async () => {
-    const response = await axios.post(`http://localhost:3000/favorite`, {
-      token: token,
-      type: "character",
-      marvelId: id,
-    });
+    const response = await axios.post(
+      `${import.meta.env.VITE_MY_API_UR}/favorite`,
+      {
+        token: token,
+        type: "character",
+        marvelId: id,
+      }
+    );
     setDataFavorite({ isFavorite: true, favoriteId: response.data._id });
     console.log(dataFavorite);
   };
   const removeFavorite = async () => {
     await axios.delete(
-      `http://localhost:3000/favorite/${dataFavorite.favoriteId}`
+      `${import.meta.env.VITE_MY_API_UR}/favorite/${dataFavorite.favoriteId}`
     );
     setDataFavorite({ isFavorite: false });
     console.log(dataFavorite);

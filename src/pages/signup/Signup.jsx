@@ -16,11 +16,14 @@ const Signup = ({ setUser }) => {
     try {
       event.preventDefault();
       //ENREGISTREMENT DE L'USER EN BDD
-      const response = await axios.post(`http://localhost:3000/user/signup/`, {
-        email: email,
-        password: password,
-        username: username,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_MY_API_UR}/user/signup/`,
+        {
+          email: email,
+          password: password,
+          username: username,
+        }
+      );
       if (response.data.token) {
         setUser(response.data.token);
         navigate("/");

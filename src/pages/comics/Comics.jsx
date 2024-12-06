@@ -12,11 +12,10 @@ const Comics = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentLimit, setCurrentLimit] = useState(25);
 
-  const API_BASE_URL = "http://localhost:3000/comics";
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_BASE_URL}/`, {
+        const response = await axios.get(`${import.meta.env.VITE_MY_API_UR}/`, {
           params: {
             limit: currentLimit,
             skip: (currentPage - 1) * currentLimit,

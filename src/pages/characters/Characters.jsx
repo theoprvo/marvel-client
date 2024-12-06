@@ -11,13 +11,11 @@ const Characters = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentLimit, setCurrentLimit] = useState(25);
 
-  const API_BASE_URL = "http://localhost:3000/characters";
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${API_BASE_URL}/${currentLimit}/${
+          `${import.meta.env.VITE_MY_API_UR}/${currentLimit}/${
             (currentPage - 1) * currentLimit
           }/${research}`
         );
