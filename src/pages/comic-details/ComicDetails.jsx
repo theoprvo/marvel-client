@@ -13,12 +13,12 @@ const ComicDetails = ({ token }) => {
     const fetchData = async () => {
       //DATA OF COMIC
       const response = await axios.get(
-        `${import.meta.env.VITE_MY_API_UR}/comic/${id}`
+        `${import.meta.env.VITE_MY_API_URL}/comic/${id}`
       );
       setData(response.data);
       //DATA OF FAVORITES OF USER
       const responseFavoriteCheck = await axios.get(
-        `${import.meta.env.VITE_MY_API_UR}/favorite/check`,
+        `${import.meta.env.VITE_MY_API_URL}/favorite/check`,
         { params: { userToken: token, marvelId: id } }
       );
       setDataFavorite({ ...responseFavoriteCheck.data });

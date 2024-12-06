@@ -17,7 +17,7 @@ const Signup = ({ setUser }) => {
       event.preventDefault();
       //ENREGISTREMENT DE L'USER EN BDD
       const response = await axios.post(
-        `${import.meta.env.VITE_MY_API_UR}/user/signup/`,
+        `${import.meta.env.VITE_MY_API_URL}/user/signup/`,
         {
           email: email,
           password: password,

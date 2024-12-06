@@ -5,7 +5,10 @@ const ComicsRelated = (props) => {
   return (
     <>
       <div className="container-item-card">
-        <Link to="/" className="character-card comics-related-hover">
+        <Link
+          to={`/comic/${props._id}`}
+          className="character-card comics-related-hover"
+        >
           <div>
             <img
               className="item-img"

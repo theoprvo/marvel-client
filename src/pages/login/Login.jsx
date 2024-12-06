@@ -18,7 +18,7 @@ const Login = ({ setUser }) => {
       setIsLoading(true);
       //
       const response = await axios.post(
-        `${import.meta.env.VITE_MY_API_UR}/user/login/`,
+        `${import.meta.env.VITE_MY_API_URL}/user/login/`,
         {
           email: email,
           password: password,

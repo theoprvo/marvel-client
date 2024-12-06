@@ -12,12 +12,12 @@ const CharacterFavorite = ({ id, token }) => {
     const fetchData = async () => {
       //DATA OF CHARACTER
       const response = await axios.get(
-        `${import.meta.env.VITE_MY_API_UR}/character/${id}`
+        `${import.meta.env.VITE_MY_API_URL}/character/${id}`
       );
       setData(response.data);
       //DATA OF FAVORITES OF USER
       const responseFavoriteCheck = await axios.get(
-        `${import.meta.env.VITE_MY_API_UR}/favorite/check`,
+        `${import.meta.env.VITE_MY_API_URL}/favorite/check`,
         { params: { userToken: token, marvelId: id } }
       );
       setDataFavorite({ ...responseFavoriteCheck.data });
@@ -28,7 +28,7 @@ const CharacterFavorite = ({ id, token }) => {
 
   const removeFavorite = async () => {
     await axios.delete(
-      `${import.meta.env.VITE_MY_API_UR}/favorite/${dataFavorite.favoriteId}`
+      `${import.meta.env.VITE_MY_API_URL}/favorite/${dataFavorite.favoriteId}`
     );
     setDataFavorite({ isFavorite: false });
     console.log(dataFavorite);

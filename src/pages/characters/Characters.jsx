@@ -15,7 +15,7 @@ const Characters = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_MY_API_UR}/${currentLimit}/${
+          `${import.meta.env.VITE_MY_API_URL}/characters/${currentLimit}/${
             (currentPage - 1) * currentLimit
           }/${research}`
         );

@@ -15,13 +15,16 @@ const Comics = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_MY_API_UR}/`, {
-          params: {
-            limit: currentLimit,
-            skip: (currentPage - 1) * currentLimit,
-            filter: research,
-          },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_MY_API_URL}/comics`,
+          {
+            params: {
+              limit: currentLimit,
+              skip: (currentPage - 1) * currentLimit,
+              filter: research,
+            },
+          }
+        );
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -78,7 +81,6 @@ const Comics = () => {
           </select>
         </div>
         <div className="items-container">
-          {console.log(data)}
           {data.results.map((item) => (
             <ComicCard
               key={item._id}

@@ -14,12 +14,12 @@ const CharacterDetails = ({ token }) => {
     const fetchData = async () => {
       //DATA OF CHARACTER
       const response = await axios.get(
-        `${import.meta.env.VITE_MY_API_UR}/comics/${id}`
+        `${import.meta.env.VITE_MY_API_URL}/comics/${id}`
       );
       setData(response.data);
       //DATA OF FAVORITES OF USER
       const responseFavoriteCheck = await axios.get(
-        `${import.meta.env.VITE_MY_API_UR}/favorite/check`,
+        `${import.meta.env.VITE_MY_API_URL}/favorite/check`,
         { params: { userToken: token, marvelId: id } }
       );
       setDataFavorite({ ...responseFavoriteCheck.data });
@@ -30,7 +30,7 @@ const CharacterDetails = ({ token }) => {
 
   const addFavorite = async () => {
     const response = await axios.post(
-      `${import.meta.env.VITE_MY_API_UR}/favorite`,
+      `${import.meta.env.VITE_MY_API_URL}/favorite`,
       {
         token: token,
         type: "character",
@@ -42,7 +42,7 @@ const CharacterDetails = ({ token }) => {
   };
   const removeFavorite = async () => {
     await axios.delete(
-      `${import.meta.env.VITE_MY_API_UR}/favorite/${dataFavorite.favoriteId}`
+      `${import.meta.env.VITE_MY_API_URL}/favorite/${dataFavorite.favoriteId}`
     );
     setDataFavorite({ isFavorite: false });
     console.log(dataFavorite);
@@ -96,10 +96,11 @@ const CharacterDetails = ({ token }) => {
         <section className="appearance-section">
           <h2>Appear in</h2>
           <div className="appearance-detail">
-            {data.comics.map((item, index) => {
+            {data.comics.map((item) => {
               return (
                 <ComicsRelated
-                  key={index}
+                  key={item._id}
+                  _id={item._id}
                   name={item.title}
                   img_url={item.thumbnail.path}
                   img_extension={item.thumbnail.extension}
